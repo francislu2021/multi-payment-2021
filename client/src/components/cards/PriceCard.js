@@ -10,7 +10,12 @@ const PriceCard = ({price}) => {
 </div>
 
 <div className="card-body">
-  <h1 className="card-title pricing-card-title">$50/mo
+  <h1 className="card-title pricing-card-title">
+    {(price.unit_amount / 100).toLocaleString("en-US",{
+      style: "currency",
+      currency: "CAD",
+    })}{" "}
+    <small className="text-muted fw-light">/mo</small>
   </h1>
   <ul className="list-unstyled mt-3 mb-4">
     <li>5 exclusive stocks</li>

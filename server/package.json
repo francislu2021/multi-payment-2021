@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon -r esm server.js"
   },
   "keywords": [],
@@ -18,9 +17,9 @@
     "express": "^4.17.1",
     "express-jwt": "^6.1.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.0.13",
+    "mongoose": "^6.0.8",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.15",
-    "stripe": "^8.191.0"
+    "nodemon": "^2.0.13",
+    "stripe": "^8.178.0"
   }
 }

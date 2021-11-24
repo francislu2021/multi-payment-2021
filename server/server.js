@@ -14,17 +14,20 @@ connect(process.env.DATABASE)
 .then(() => console.log("DB connected"))
 .catch((err) => console.log("DB Connection eror", err));
 
-
-
-
 // middlewares
-
-
+app.use(express.json({ limit: "5mb"}));
+app.use(
+    cors({
+    origin: [process.env.CLIENT_URL],
+})
+);
 
 //autoload routes
-
-
+app.get("/api/register", (req, res) => {
+res.send("Hey you are here at Node server");
+});
 
 //listen
-
+const port = process.env.PORT || 8000;
+app.listen(port, () => console.log( `Server is running on port ${port}`));
 

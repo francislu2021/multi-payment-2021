@@ -1,12 +1,12 @@
 import React from "react";
 
-const PriceCard = () => {
+const PriceCard = ({price}) => {
   return(
     
 <div className="col">
   <div className="card mb-4 rounded-3 shadow-sm">
 <div className="card-header py-3">
-<h4 className="my-0 fw-normal">BASIC</h4>
+<h4 className="my-0 fw-normal">{price.nickname}</h4>
 </div>
 
 <div className="card-body">
@@ -18,6 +18,8 @@ const PriceCard = () => {
     <li>free consultations</li>
     <li>help center access</li>
   </ul>
+
+  <pre>{JSON.stringify(price, null, 4)}</pre>
 
   <button className="w-100 btn btn-lg btn-outline-danger">Sign up</button>
   </div>

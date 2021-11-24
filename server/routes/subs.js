@@ -9,6 +9,7 @@ import {
   subscriptions,
   customerPortal,
 } from "../controllers/subs";
+
 import { requireSignin } from "../middlewares";
 
 router.get("/prices", prices);

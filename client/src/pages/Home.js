@@ -49,7 +49,7 @@ const Home = ({ history }) => {
       history.push(`/${price.nickname.toLowerCase()}`);
       return;
     }
-    // console.log("plan clicked", price.id);
+    console.log("plan clicked", price.id);
     if (state && state.token) {
       const { data } = await axios.post("/create-subscription", {
         priceId: price.id,
@@ -75,7 +75,7 @@ const Home = ({ history }) => {
             <PriceCard key={price.id}
               price={price}
               handleSubscription={handleClick}
-              userSubscriptions={userSubscriptions}
+              
             />
           ))}
       </div>

@@ -8,7 +8,7 @@ export const prices = async (req, res) => {
 };
 
 export const createSubscription = async (req, res) => {
-  // console.log(req.body);
+  console.log(req.body);
   try {
     const user = await User.findById(req.user._id);
 

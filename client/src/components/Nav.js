@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const Nav= () => {
     return (
-        <ul class="nav">
+        <ul class="nav border">
             <li class="nav-item">
-                 <Link class="nav-link active" aria-current="page" to="/">
+                 <Link class="nav-link" aria-current="page" to="/">
                      Home
                      </Link>
                      </li>

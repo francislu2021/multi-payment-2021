@@ -30,7 +30,7 @@ export const register = async (req, res) => {
     const customer = await stripe.customers.create({
       email,
     });
-    // console.log("stripe customer created on signup", customer);
+    console.log("stripe customer created on signup", customer);
 
     try {
       const user = await new User({
